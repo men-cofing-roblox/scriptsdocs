@@ -41,6 +41,8 @@
   </pre>
   <h1>How make Window</h1>
   <pre>
+  MenHub:Notify("hello world!",10 --[[timer sec]]) -- is Notify gang
+	  
   local window = MenHub:CreateWindow(mylua)
   
   window:Button("Click Me!",function()
@@ -62,6 +64,8 @@
   MenHub:Set("MiscRapidFire",true) -- make the rapid fire to true (only if the option is exixts or error)
 
   MenHub:Get("MiscRapidFire") -- get value if this is enabled or idk
+
+  MenHub:ListOption() -- list every thing that you have
   </pre>
 </body>
 </html>

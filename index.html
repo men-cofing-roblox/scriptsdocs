@@ -41,31 +41,34 @@
   </pre>
   <h1>How make Window</h1>
   <pre>
-  MenHub:Notify("hello world!",10 --[[timer sec]]) -- is Notify gang
+MenHub:Notify("hello world!",10 --[[timer sec]]) -- is Notify gang
 	  
-  local window = MenHub:CreateWindow(mylua)
+local window = MenHub:CreateWindow(mylua)
   
-  window:Button("Click Me!",function()
-	MenHub:Notify("you click me!")
-  end)
+window:Button("Click Me!",function()
+MenHub:Notify("you click me!")
+end)
+
+window:Toggle("Toggle me!",false --[[the def]],function(value)
+MenHub:Notify(tostring(value))
+end) -- return function for set back to like false
   
-  window:Toggle("Toggle me!",false --[[the def]],function(value)
-	MenHub:Notify(value)
-  end) -- return function for set back to like false
+window:Silder("Silde me!",0 --[[the def]],0 --[[the min]],1 --[[the max]],true --[[if allow like 0.64]],function(value)
+MenHub:Notify(value)
+end) -- return function for set back to like 0
+
+window:Dropdown("Drop me!","option1" --[[the def]],{"option1","option2","option3","option4"} --[[the options]],function(value)
+MenHub:Notify(value)
+end) -- return function for set back to like option1
   
-  window:Silder("Silde me!",0 --[[the def]],0 --[[the min]],1 --[[the max]],true --[[if allow like 0.64]],function(value)
-	MenHub:Notify(value)
-  end) -- return function for set back to like 0
-  
-  -- dropdown, otc will be soon
   </pre>
   <h1>Misc</h1>
   <pre>
-  MenHub:Set("MiscRapidFire",true) -- make the rapid fire to true (only if the option is exixts or error)
+MenHub:Set("MiscRapidFire",true) -- make the rapid fire to true (only if the option is exixts or error)
 
-  MenHub:Get("MiscRapidFire") -- get value if this is enabled or idk
+MenHub:Get("MiscRapidFire") -- get value if this is enabled or idk
 
-  MenHub:ListOption() -- list every thing that you have
+MenHub:ListOption() -- list every thing that you have
   </pre>
 </body>
 </html>

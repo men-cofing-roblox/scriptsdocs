@@ -70,9 +70,24 @@ MenHub:Get("MiscRapidFire") -- get value if this is enabled or idk
 
 MenHub:ListOption() -- list every thing that you have
   </pre>
-	<h1>OutDoor support (version >= 351 only)</h1>
+	<h1>OutDoor support</h1>
   <pre>
 local MenHubapi = _G.Mhapi -- the way is same same as normal MenHub var but you cant override menhub things code
+  </pre>
+	<h1>OutDoor Some Vars Support (version >= GGFUCKINGEZ only)</h1>
+	  <pre>
+local MenHubapi = _G.Mhapi -- loading the menhub api
+local Data = MenHubapi.DoorCloseOut -- data that never outdoor data can read or run
+
+print(Data.LocalFighter) will return your fighter (useful as fuck)
+print(Data.CurrectWeapon) will return your correct weapon (clientItem)
+		  
+print(Data.RageBotTarget) -- will return Target Character of ragebot targeting system
+print(Data.SilentTarget) -- same as ragebot but just for silent
+print(Data.AimbotTarget) -- same as ragebot but just for aimbot
+print(Data.StartingtoBait) -- will false it is not in ragebot enabled and otc, if is starting to bait the target then will return true
+
+Data.ForceVoid(true) -- making the ragebot to always voiding, to disblad that just make it false
   </pre>
 </body>
 </html>
